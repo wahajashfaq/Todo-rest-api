@@ -13,7 +13,7 @@ const app = express();
 
 // DB connection
 mongoose
-  .connect("mongodb://127.0.0.1:27017/todoapp", {
+  .connect("mongodb+srv://test:test@cluster0.o7eq3.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
