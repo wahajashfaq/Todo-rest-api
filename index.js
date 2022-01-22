@@ -4,7 +4,7 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 // we are using port 8000
-const port = 80;
+const port = 8080;
 
 // we will create these todoRoutes in the future
 const todoRoutes = require("./routes/Todo");
@@ -30,6 +30,6 @@ app.use(bodyParser.json());
 app.use("/api", todoRoutes);
 
 // start the server in the port 8000
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
   console.log(`Listening to http://localhost:${port}`);
 });
